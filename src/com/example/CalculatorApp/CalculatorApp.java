@@ -15,7 +15,6 @@ public class CalculatorApp {
         System.out.println("3 - Multiplication");
         System.out.println("4 - Division");
         System.out.println("5 - Square Root");
-        System.out.println("6 - Quit Program");
         System.out.print("Enter menu selection by typing number here: ");
         userChoice = user.nextInt();
 
@@ -92,7 +91,7 @@ public class CalculatorApp {
                 break;
             default:
                 System.out.println();
-                System.out.print("Invalid choice. Please type 1, 2, 3, 4, 5 or 6:");
+                System.out.print("Invalid choice. Please type 1, 2, 3, 4 or 5:");
                 System.out.println();
                 break;
 
