@@ -6,8 +6,7 @@ public class CalculatorApp {
     Scanner user = new Scanner(System.in);
     int userChoice;
     boolean quit = false;
-    double numberA;
-    double numberB;
+    double numberA, numberB, sumAB;
 
     do {
         System.out.println("Calculator Menu: What would you like to do?");
@@ -17,7 +16,7 @@ public class CalculatorApp {
         System.out.println("4 - Division");
         System.out.println("5 - Square Root");
         System.out.println("6 - Quit Program");
-        System.out.println("Enter menu selection by typing number here: ");
+        System.out.print("Enter menu selection by typing number here: ");
         userChoice = user.nextInt();
 
         switch (userChoice) {
@@ -29,6 +28,12 @@ public class CalculatorApp {
                 System.out.println();
                 System.out.print("Give me the second number: ");
                 numberB = user.nextDouble();
+
+                sumAB = numberA + numberB;
+                System.out.println("The sum of " + numberA + " and " + numberB + " is " + sumAB);
+                System.out.println();
+                System.out.print("Would you like to do another calculation? Type 1 for yes, 2 for no: ");
+
         }
 
     } while(!quit);
