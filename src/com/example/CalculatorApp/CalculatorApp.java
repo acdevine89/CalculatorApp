@@ -92,24 +92,23 @@ public class CalculatorApp {
                 break;
             default:
                 System.out.println();
-                System.out.print("Invalid choice. Please type 1, 2, 3, 4 or 5:");
+                System.out.print("Invalid choice. The only options are 1, 2, 3, 4 or 5.");
                 System.out.println();
                 break;
 
         }
 
-        System.out.print("Would you like to do another calculation? Type 1 for yes, 2 for no: ");
+        System.out.print("Would you like to continue? Type 1 to go back to main menu, or type 2 to quit: ");
         calculateAgain = user.nextInt();
 
         while (calculateAgain !=1 && calculateAgain != 2) {
             System.out.print("Invalid choice. Please type 1 or 2: ");
             calculateAgain = user.nextInt();
-            if (calculateAgain == 2) {
-                System.out.println("Goodbye!");
-            }
         }
 
     } while(calculateAgain == 1);
+
+        System.out.println("Goodbye!");
 
     }
 }
