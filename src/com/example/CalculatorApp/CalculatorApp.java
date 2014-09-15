@@ -8,5 +8,11 @@ public class CalculatorApp {
     boolean quit = false;
     double numberA;
     double numberB;
+
+    do {
+
+
+    } while(!quit);
+
     }
 }
