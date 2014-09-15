@@ -1,12 +1,13 @@
 package com.example.CalculatorApp;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class CalculatorApp {
     public static void main(String[] args) {
     Scanner user = new Scanner(System.in);
     int userChoice;
     boolean quit = false;
-    double numberA, numberB, sumAB, subtractAB, multiplyAB;
+    double numberA, numberB, sumAB, subtractAB, multiplyAB, divideAB, squareRootA;
 
     do {
         System.out.println("Calculator Menu: What would you like to do?");
@@ -59,6 +60,29 @@ public class CalculatorApp {
                 System.out.println("The product of " + numberA + " and " + numberB + " is " + multiplyAB);
                 System.out.println();
                 break;
+            case 4:
+                System.out.println();
+                System.out.print("Give me the number to be divided: ");
+                numberA = user.nextDouble();
+
+                System.out.println();
+                System.out.print("Give me the number to divide by: ");
+                numberB = user.nextDouble();
+
+                divideAB = numberA / numberB;
+                System.out.println("The quotient of " + numberA + " and " + numberB + " is " + divideAB);
+                System.out.println();
+                break;
+            case 5:
+                System.out.println();
+                System.out.print("Give me the number to find the square root of: ");
+                numberA = user.nextInt();
+
+                if (numberA < 0)
+                    System.out.print("Can't find square root of a negative number. Please enter a positive  number: ");
+
+                squareRootA = Math.sqrt(numberA);
+                System.out.println("The square root of " + numberA + " is " + squareRootA);
 
         }
 
