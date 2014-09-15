@@ -5,8 +5,7 @@ import java.lang.Math;
 public class CalculatorApp {
     public static void main(String[] args) {
     Scanner user = new Scanner(System.in);
-    int userChoice;
-    boolean quit = false;
+    int userChoice, calculateAgain;
     double numberA, numberB, sumAB, subtractAB, multiplyAB, divideAB, squareRootA;
 
     do {
@@ -90,18 +89,24 @@ public class CalculatorApp {
                 break;
             default:
                 System.out.println();
-                System.out.println("Invalid choice. Please select 1, 2, 3, 4, 5 or 6.");
+                System.out.print("Invalid choice. Please type 1, 2, 3, 4, 5 or 6:");
                 System.out.println();
                 break;
 
         }
 
         System.out.print("Would you like to do another calculation? Type 1 for yes, 2 for no: ");
+        calculateAgain = user.nextInt();
 
-    } while(!quit);
+        while (calculateAgain !=1 && calculateAgain != 2) {
+            System.out.print("Invalid choice. Please type 1 or 2: ");
+            calculateAgain = user.nextInt();
+            if (calculateAgain == 2) {
+                System.out.println("Goodbye!");
+            }
+        }
 
-        System.out.println();
-        System.out.println("Goodbye!");
+    } while(calculateAgain == 1);
 
     }
 }
