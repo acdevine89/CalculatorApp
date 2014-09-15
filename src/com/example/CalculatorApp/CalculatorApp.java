@@ -78,17 +78,30 @@ public class CalculatorApp {
                 System.out.print("Give me the number to find the square root of: ");
                 numberA = user.nextInt();
 
-                if (numberA < 0)
-                    System.out.print("Can't find square root of a negative number. Please enter a positive  number: ");
-
                 squareRootA = Math.sqrt(numberA);
                 System.out.println("The square root of " + numberA + " is " + squareRootA);
+
+                do {
+                    System.out.print("Can't find square root of a negative number. Please enter a positive  number: ");
+                    numberA = user.nextInt();
+                }while(numberA < 0);
+
+                System.out.println();
+                break;
+            default:
+                System.out.println();
+                System.out.println("Invalid choice. Please select 1, 2, 3, 4, 5 or 6.");
+                System.out.println();
+                break;
 
         }
 
         System.out.print("Would you like to do another calculation? Type 1 for yes, 2 for no: ");
 
     } while(!quit);
+
+        System.out.println();
+        System.out.println("Goodbye!");
 
     }
 }
