@@ -19,7 +19,17 @@ public class CalculatorApp {
         System.out.println("6 - Quit Program");
         System.out.println("Enter menu selection by typing number here: ");
         userChoice = user.nextInt();
-        
+
+        switch (userChoice) {
+            case 1:
+                System.out.println();
+                System.out.print("Give me the first number: ");
+                numberA = user.nextDouble();
+
+                System.out.println();
+                System.out.print("Give me the second number: ");
+                numberB = user.nextDouble();
+        }
 
     } while(!quit);
 
