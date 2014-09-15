@@ -83,7 +83,8 @@ public class CalculatorApp {
                     System.out.print("Can't find square root of a negative number. Please enter a positive  number: ");
                     numberA = user.nextInt();
                     if (numberA >= 0) {
-                       System.out.println("The square root of " + numberA + " is " + squareRootA);
+                        squareRootA = Math.sqrt(numberA);
+                        System.out.println("The square root of " + numberA + " is " + squareRootA);
                     }
                 }
 
