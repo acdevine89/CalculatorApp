@@ -80,10 +80,13 @@ public class CalculatorApp {
                 squareRootA = Math.sqrt(numberA);
                 System.out.println("The square root of " + numberA + " is " + squareRootA);
 
-                do {
+                while (numberA < 0) {
                     System.out.print("Can't find square root of a negative number. Please enter a positive  number: ");
                     numberA = user.nextInt();
-                }while(numberA < 0);
+                    if (numberA >= 0) {
+                       System.out.println("The square root of " + numberA + " is " + squareRootA);
+                    }
+                }
 
                 System.out.println();
                 break;
