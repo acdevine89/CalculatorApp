@@ -6,7 +6,7 @@ public class CalculatorApp {
     Scanner user = new Scanner(System.in);
     int userChoice;
     boolean quit = false;
-    double numberA, numberB, sumAB;
+    double numberA, numberB, sumAB, subtractAB, multiplyAB;
 
     do {
         System.out.println("Calculator Menu: What would you like to do?");
@@ -32,9 +32,37 @@ public class CalculatorApp {
                 sumAB = numberA + numberB;
                 System.out.println("The sum of " + numberA + " and " + numberB + " is " + sumAB);
                 System.out.println();
-                System.out.print("Would you like to do another calculation? Type 1 for yes, 2 for no: ");
+                break;
+            case 2:
+                System.out.println();
+                System.out.print("Give me the number to be subtracted from: ");
+                numberA = user.nextDouble();
+
+                System.out.println();
+                System.out.print("Give me the number to subtract: ");
+                numberB = user.nextDouble();
+
+                subtractAB = numberA - numberB;
+                System.out.println("The difference between " + numberA + " and " + numberB + " is " + subtractAB);
+                System.out.println();
+                break;
+            case 3:
+                System.out.println();
+                System.out.print("Give me the first number: ");
+                numberA = user.nextDouble();
+
+                System.out.println();
+                System.out.print("Give me the second number: ");
+                numberB = user.nextDouble();
+
+                multiplyAB = numberA * numberB;
+                System.out.println("The product of " + numberA + " and " + numberB + " is " + multiplyAB);
+                System.out.println();
+                break;
 
         }
+
+        System.out.print("Would you like to do another calculation? Type 1 for yes, 2 for no: ");
 
     } while(!quit);
 
